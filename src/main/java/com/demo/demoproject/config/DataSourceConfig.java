@@ -18,7 +18,7 @@ public class DataSourceConfig {
   @Value("${JDBC_DATABASE_USERNAME}")
   private String username;
 
-  @Bean
+  @Bean("dataSource")
   public DataSource dataSource() {
     DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
     dataSourceBuilder.driverClassName("org.postgresql.Driver");
