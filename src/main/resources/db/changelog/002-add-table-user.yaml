@@ -1,19 +1,19 @@
 databaseChangeLog:
   - changeSet:
-      id: 1
+      id: create table with users
       author: a-level
       changes:
         - createTable:
-            tableName: user
             schemaName: demo
+            tableName: user
             columns:
               - column:
-                name: id
-                type: bigint
-                constraints:
-                  primaryKey: true
-                  nullable: false
-                  unique: true
+                  name: id
+                  type: bigint
+                  constraints:
+                    - primaryKey: true
+                    - unique: true
+                    - nullable: false
               - column:
                   name: name
                   type: text
