@@ -17,6 +17,7 @@
 
   <properties>
     <java.version>11</java.version>
+    <liquibase-core.version>4.7.1</liquibase-core.version>
   </properties>
 
   <dependencies>
@@ -40,6 +41,13 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.liquibase/liquibase-core -->
+    <dependency>
+      <groupId>org.liquibase</groupId>
+      <artifactId>liquibase-core</artifactId>
+      <version>${liquibase-core.version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>
