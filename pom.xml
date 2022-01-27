@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<liquibase-core.version>3.4.1</liquibase-core.version>
+		<liquibase-core.version>4.7.1</liquibase-core.version>
 	</properties>
 
 	<dependencies>
