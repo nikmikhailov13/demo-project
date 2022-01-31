@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create table with passport
+      author: a-level
+      changes:
+        - createTable:
+            schemaName: demo
+            tableName: passport
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    - primaryKey: true
+                    - unique: true
+                    - nullable: false
+              - column:
+                  name: serial_number
+                  type: text

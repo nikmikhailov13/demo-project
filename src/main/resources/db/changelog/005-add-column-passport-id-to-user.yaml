@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: add column passport_id to user
+      author: a-level
+      changes:
+        - addColumn:
+            schemaName: demo
+            tableName: user
+            columns:
+              - column:
+                  name: passport_id
+                  type: bigint
+
+        - addForeignKeyConstraint:
+            baseColumnNames: passport_id
+            baseTableName: user
+            baseTableSchemaName: demo
+            constraintName: fk_user_to_passport
+            referencedColumnNames: id
+            referencedTableName: passport
+            referencedTableSchemaName: demo

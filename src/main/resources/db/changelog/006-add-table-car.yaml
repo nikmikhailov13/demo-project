@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create table with car
+      author: a-level
+      changes:
+        - createTable:
+            schemaName: demo
+            tableName: car
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    - primaryKey: true
+                    - unique: true
+                    - nullable: false
+              - column:
+                  name: made
+                  type: text
+              - column:
+                  name: price
+                  type: int
+              - column:
+                  name: user_id
+                  type: bigint
+
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: car
+            baseTableSchemaName: demo
+            constraintName: fk_car_to_user
+            referencedColumnNames: id
+            referencedTableName: user
+            referencedTableSchemaName: demo

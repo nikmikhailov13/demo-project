@@ -1,10 +1,16 @@
 package com.demo.demoproject.entity;
 
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +24,22 @@ public class User {
   @Column(name = "name")
   private String name;
 
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "passport_id")
+  private Passport passport;
+
+  @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+  private List<Car> cars;
+
   public User() {
+  }
+
+  public List<Car> getCars() {
+    return cars;
+  }
+
+  public void setCars(List<Car> cars) {
+    this.cars = cars;
   }
 
   public long getId() {
@@ -35,5 +56,13 @@ public class User {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public Passport getPassport() {
+    return passport;
+  }
+
+  public void setPassport(Passport passport) {
+    this.passport = passport;
   }
 }
