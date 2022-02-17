@@ -1,7 +1,6 @@
 package com.demo.demoproject.repository;
 
-import com.demo.demoproject.entity.Passport;
-import liquibase.pro.packaged.R;
+import com.demo.demoproject.entity.user.Passport;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

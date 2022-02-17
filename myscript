@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mvn clean install -DskipTests
+
+java -DJDBC_DATABASE_PASSWORD=9359fbf2470da2ef191352fede433423a4473dd2f98ab7acde26f84f87060e83 -DJDBC_DATABASE_USERNAME=wuizcpuzxizktf -DJDBC_DATABASE_URL=jdbc:postgresql://ec2-54-216-90-155.eu-west-1.compute.amazonaws.com:5432/d83l5nojr33l7v -jar target/demo-project-0.0.1-SNAPSHOT.jar

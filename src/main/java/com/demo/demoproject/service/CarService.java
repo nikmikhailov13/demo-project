@@ -1,7 +1,7 @@
 package com.demo.demoproject.service;
 
-import com.demo.demoproject.entity.Car;
-import com.demo.demoproject.entity.User;
+import com.demo.demoproject.entity.user.Car;
+import com.demo.demoproject.entity.user.User;
 import com.demo.demoproject.repository.CarRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

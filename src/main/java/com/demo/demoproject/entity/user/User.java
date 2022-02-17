@@ -1,4 +1,4 @@
-package com.demo.demoproject.entity;
+package com.demo.demoproject.entity.user;
 
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -12,7 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import lombok.Builder;
 
+@Builder
 @Entity
 @Table(name = "user", schema = "demo")
 public class User {

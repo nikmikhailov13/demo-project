@@ -1,7 +1,7 @@
 package com.demo.demoproject.controller;
 
-import com.demo.demoproject.entity.Car;
-import com.demo.demoproject.entity.User;
+import com.demo.demoproject.entity.user.Car;
+import com.demo.demoproject.entity.user.User;
 import com.demo.demoproject.service.CarService;
 import com.demo.demoproject.service.UserService;
 import java.util.List;
